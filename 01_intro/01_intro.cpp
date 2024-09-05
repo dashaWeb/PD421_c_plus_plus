@@ -1,10 +1,14 @@
 ﻿#include <iostream>
+#include <Windows.h> // підключення заголовного файлу Windows.h
+
 //using std::string;
 using namespace std;
 
 int main()
 {
-
+	SetConsoleCP(1251); // встановлення кодування Windows-1251 в  потік введення
+	SetConsoleOutputCP(1251); // встановлення кодування Windows-1251 в  потік виведення
+	cout << "Привіт" << endl;
 	// ctrl + shift + /
 	// - однорядковий коментар
 	/*
@@ -113,7 +117,14 @@ int main()
 
 	const double PI = 3.14;
 	cout << (day < 30 and day > 0) << endl;
+	cout << (day < 30 && day > 0) << endl;
 	// && - and
 	// || - or
+
+
+
 }
+
+
+
 
