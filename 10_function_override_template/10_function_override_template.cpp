@@ -121,7 +121,7 @@ void printArray(T arr[][COL], size_t row, size_t col, string prompt = "")
 			cout << arr[j][i] << "\t";
 		}cout << endl;
 	}
-	
+
 }
 template <typename T>
 void printArray(T arr[], size_t size, string prompt = "")
@@ -132,6 +132,18 @@ void printArray(T arr[], size_t size, string prompt = "")
 		cout << arr[i] << "\t";
 	}cout << endl;
 }
+
+template <typename T>
+void reverse(T arr[], size_t length)
+{
+	for (size_t i = 0; i < length / 2; i++)
+	{
+		T temp = arr[i];
+		arr[i] = arr[length - 1 - i];
+		arr[length - 1 - i] = temp;
+	}
+}
+
 int main()
 {
 	/*cout << sum(2.9, 4.9) << endl;
@@ -152,13 +164,18 @@ int main()
 	cout << "double --> " << sum(5.5, 4.6) << endl;
 	cout << "char   --> " << sum('A', ' ') << endl;
 	string word1 = "Hello", word2 = "World";
-	cout << "string --> " << sum(word1,word2) << endl;
+	cout << "string --> " << sum(word1, word2) << endl;
 	cout << "int    --> " << sum(5, 4.6) << endl;
 	cout << "int    --> " << sum(5.0, 4.6, 9.9) << endl;
 
 	const int row = 4, col = 7;
 	int mas[row][col]{};
-	fillArray(mas, row, col, 10, 50,false);
+	fillArray(mas, row, col, 10, 50, false);
 	printArray(mas, row, col);
+
+	cout << "\n\n ===================== Task 2 =========================" << endl;
+	printArray(arr, SIZE, "Print array before : ");
+	reverse(arr, SIZE);
+	printArray(arr, SIZE, "Print array after  : ");
 }
 
