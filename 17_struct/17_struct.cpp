@@ -1,20 +1,99 @@
-// 17_struct.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <string>
+using namespace std;
 
+struct Date {
+	unsigned short day;
+	unsigned short month;
+	unsigned short year;
+	string getDate()
+	{
+		// 01.10.2009
+		return (day < 10 ? "0" : "") + to_string(day) + "." + (month < 10 ? "0" : "") + to_string(month) + "." + to_string(year);
+	}
+};
+
+
+struct Student
+{
+	string name;
+	string surname;
+	Date birthdate;
+};
+
+void printStudent(Student student)
+{
+	cout << "First Name :: " << student.name << endl;
+	cout << "Surname    :: " << student.surname << endl;
+	cout << "Date       :: " << student.birthdate.getDate() << endl;
+}
+void printStudent(Student* student)
+{
+	cout << "First Name :: " << student->name << endl;
+	cout << "Surname    :: " << student->surname << endl;
+	cout << "Date       :: " << student->birthdate.getDate() << endl;
+}
+string getDate(Date date)
+{
+	// 01.10.2009
+	return (date.day < 10 ? "0" : "") + to_string(date.day) + "." + (date.month < 10 ? "0" : "") + to_string(date.month) + "." + to_string(date.year);
+}
+void editStudent(Student* student)
+{
+	cout << "Enter name --> "; cin >> student->name;
+	cout << "Enter surname --> "; cin >> student->surname;
+	cout << "Enter date --> "; cin >> student->birthdate.day >> student->birthdate.month >> student->birthdate.year;
+}
+void editStudent(Student& student)
+{
+	cout << "Enter name --> "; cin >> student.name;
+	cout << "Enter surname --> "; cin >> student.surname;
+	cout << "Enter date --> "; cin >> student.birthdate.day >> student.birthdate.month >> student.birthdate.year;
+}
 int main()
 {
-    std::cout << "Hello World!\n";
+
+	Student ivan;
+	ivan.name = "Ivan";
+	ivan.surname = "Golovatenko";
+	ivan.birthdate.day = 02;
+	ivan.birthdate.month = 8;
+	ivan.birthdate.year = 2009;
+
+	Student olia = { "Olia","Polishuk", {24,11,2002} };
+	printStudent(ivan);
+	printStudent(olia);
+
+	unsigned short size = 3;
+	Student* group = new Student[size]{
+		olia,
+		ivan,
+		{"Oleg","Demchuk",{15,6,2008}}
+	};
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << "\n=======================================\n";
+		printStudent(group[i]);
+	}
+	cout << "\n\n ============== Edit Student ==================\n";
+	editStudent(ivan);
+	cout << "Result :: " << endl;
+	printStudent(ivan);
+
+	Student* sasha = new Student;
+	editStudent(sasha);
+	printStudent(sasha);
+	/*string firstName = "Pasha";
+	string lastName = "Polishuk";
+	string fatherName = "None";
+	unsigned short day = 01;
+	unsigned short month = 10;
+	unsigned short year = 2009;
+
+	string firstName_2 = "Pasha";
+	string lastName_2 = "Polishuk";
+	string fatherName = "None";
+	unsigned short day = 01;
+	unsigned short month = 10;
+	unsigned short year = 2009;*/
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
