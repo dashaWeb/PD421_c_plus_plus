@@ -39,6 +39,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "17_struct", "17_struct\17_s
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "18_library", "18_library\18_library.vcxproj", "{8517B279-0F48-4DEA-B3D4-D69CF28464E8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "19_file", "19_file\19_file.vcxproj", "{A98703BD-27C9-4CAD-B872-4A195E55F05C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -265,6 +267,18 @@ Global
 		{8517B279-0F48-4DEA-B3D4-D69CF28464E8}.Release|x64.Build.0 = Release|x64
 		{8517B279-0F48-4DEA-B3D4-D69CF28464E8}.Release|x86.ActiveCfg = Release|Win32
 		{8517B279-0F48-4DEA-B3D4-D69CF28464E8}.Release|x86.Build.0 = Release|Win32
+		{A98703BD-27C9-4CAD-B872-4A195E55F05C}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{A98703BD-27C9-4CAD-B872-4A195E55F05C}.Debug|Any CPU.Build.0 = Debug|x64
+		{A98703BD-27C9-4CAD-B872-4A195E55F05C}.Debug|x64.ActiveCfg = Debug|x64
+		{A98703BD-27C9-4CAD-B872-4A195E55F05C}.Debug|x64.Build.0 = Debug|x64
+		{A98703BD-27C9-4CAD-B872-4A195E55F05C}.Debug|x86.ActiveCfg = Debug|Win32
+		{A98703BD-27C9-4CAD-B872-4A195E55F05C}.Debug|x86.Build.0 = Debug|Win32
+		{A98703BD-27C9-4CAD-B872-4A195E55F05C}.Release|Any CPU.ActiveCfg = Release|x64
+		{A98703BD-27C9-4CAD-B872-4A195E55F05C}.Release|Any CPU.Build.0 = Release|x64
+		{A98703BD-27C9-4CAD-B872-4A195E55F05C}.Release|x64.ActiveCfg = Release|x64
+		{A98703BD-27C9-4CAD-B872-4A195E55F05C}.Release|x64.Build.0 = Release|x64
+		{A98703BD-27C9-4CAD-B872-4A195E55F05C}.Release|x86.ActiveCfg = Release|Win32
+		{A98703BD-27C9-4CAD-B872-4A195E55F05C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
