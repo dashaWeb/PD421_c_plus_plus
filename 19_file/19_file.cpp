@@ -14,7 +14,7 @@ int main()
 {
 	string line = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 	string fname = "my.txt";
-
+	cout << line.size() << endl;
 	/*ofstream file;
 	file.open(fname, ios_base::app);
 
@@ -122,5 +122,5 @@ int main()
 		}
 	}
 	file.close();
-	remove("my.txt");
+	remove("my.txt"); // delete file
 }
