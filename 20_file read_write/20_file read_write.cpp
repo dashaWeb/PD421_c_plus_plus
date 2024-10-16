@@ -70,21 +70,38 @@ int main()
 	//file.close();
 
 	// читання з файлу масиву структур
-	//fstream file("data.txt", ios_base::in);// створили файловий потік і пов'язали з файлом, додали режим на читання
-	//Book res;
-	//if (!file.is_open())
-	//	cout << "Error" << endl;
-	//else
-	//{
-	//	while (file.read((char*)&res, sizeof(Book)))
-	//	{
-	//		cout << "\n\n ========================= " << res.name << " ============================" << endl;
-	//		cout << "\t\t Author    :: " << res.author << endl;
-	//		cout << "\t\t Publisher :: " << res.publisher << endl;
-	//		cout << "\t\t Genre     :: " << res.genre << endl;
-	//	}
-	//	
-	//}
+	fstream file("data.txt", ios_base::in);// створили файловий потік і пов'язали з файлом, додали режим на читання
+	Book res;
+	if (!file.is_open())
+		cout << "Error" << endl;
+	else
+	{
+		cout << file.tellg() << endl;
+		file.seekg(0, ios_base::end);
+		cout << file.tellg() / sizeof(Book) << endl;
+		int length = file.tellg() / sizeof(Book);
+		Book* result = new Book[length];
+		file.seekg(0);
+		for (size_t i = 0; i < length; i++)
+		{
+			file.read((char*)&result[i], sizeof(Book));
+		}
+		for (size_t i = 0; i < length; i++)
+		{
+			cout << "\n\n ========================= " << result[i].name << " ============================" << endl;
+			cout << "\t\t Author    :: " << result[i].author << endl;
+			cout << "\t\t Publisher :: " << result[i].publisher << endl;
+			cout << "\t\t Genre     :: " << result[i].genre << endl;
+		}
+		/*while (file.read((char*)&res, sizeof(Book)))
+		{
+			cout << "\n\n ========================= " << res.name << " ============================" << endl;
+			cout << "\t\t Author    :: " << res.author << endl;
+			cout << "\t\t Publisher :: " << res.publisher << endl;
+			cout << "\t\t Genre     :: " << res.genre << endl;
+		}*/
+		
+	}
 
 	/*fstream file("file.txt", ios_base::out | ios_base::in | ios_base::app);
 
@@ -106,8 +123,8 @@ int main()
 
 	// binary file
 
-	fstream file("data.dat", ios_base::out | ios_base::in | ios_base::binary);
-	if (!file.is_open())
+	//fstream file("data.dat", ios_base::out | ios_base::in | ios_base::binary);
+	/*if (!file.is_open())
 		cout << "Error" << endl;
 	else
 	{
@@ -122,5 +139,5 @@ int main()
 		cout << "\t\t Publisher :: " << res.publisher << endl;
 		cout << "\t\t Genre     :: " << res.genre << endl;
 	}
-	file.close();
+	file.close();*/
 }
