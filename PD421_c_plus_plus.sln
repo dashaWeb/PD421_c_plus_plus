@@ -43,6 +43,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "19_file", "19_file\19_file.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20_file read_write", "20_file read_write\20_file read_write.vcxproj", "{2124D7E1-5BC3-499D-BC2E-7D086EB5C8C4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "21_heloer library fin", "21_heloer library fin\21_heloer library fin.vcxproj", "{B7FED492-097C-46B2-A6B8-6EF0CD3DC497}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -293,6 +295,18 @@ Global
 		{2124D7E1-5BC3-499D-BC2E-7D086EB5C8C4}.Release|x64.Build.0 = Release|x64
 		{2124D7E1-5BC3-499D-BC2E-7D086EB5C8C4}.Release|x86.ActiveCfg = Release|Win32
 		{2124D7E1-5BC3-499D-BC2E-7D086EB5C8C4}.Release|x86.Build.0 = Release|Win32
+		{B7FED492-097C-46B2-A6B8-6EF0CD3DC497}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{B7FED492-097C-46B2-A6B8-6EF0CD3DC497}.Debug|Any CPU.Build.0 = Debug|x64
+		{B7FED492-097C-46B2-A6B8-6EF0CD3DC497}.Debug|x64.ActiveCfg = Debug|x64
+		{B7FED492-097C-46B2-A6B8-6EF0CD3DC497}.Debug|x64.Build.0 = Debug|x64
+		{B7FED492-097C-46B2-A6B8-6EF0CD3DC497}.Debug|x86.ActiveCfg = Debug|Win32
+		{B7FED492-097C-46B2-A6B8-6EF0CD3DC497}.Debug|x86.Build.0 = Debug|Win32
+		{B7FED492-097C-46B2-A6B8-6EF0CD3DC497}.Release|Any CPU.ActiveCfg = Release|x64
+		{B7FED492-097C-46B2-A6B8-6EF0CD3DC497}.Release|Any CPU.Build.0 = Release|x64
+		{B7FED492-097C-46B2-A6B8-6EF0CD3DC497}.Release|x64.ActiveCfg = Release|x64
+		{B7FED492-097C-46B2-A6B8-6EF0CD3DC497}.Release|x64.Build.0 = Release|x64
+		{B7FED492-097C-46B2-A6B8-6EF0CD3DC497}.Release|x86.ActiveCfg = Release|Win32
+		{B7FED492-097C-46B2-A6B8-6EF0CD3DC497}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
